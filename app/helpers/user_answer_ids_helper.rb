@@ -1,0 +1,2 @@
+module UserAnswerIdsHelper
+end

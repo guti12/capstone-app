@@ -1,0 +1,2 @@
+class AnswerNode < ApplicationRecord
+end

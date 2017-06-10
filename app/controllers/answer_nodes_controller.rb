@@ -1,0 +1,2 @@
+class AnswerNodesController < ApplicationController
+end

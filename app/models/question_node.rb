@@ -1,0 +1,2 @@
+class QuestionNode < ApplicationRecord
+end

@@ -1,18 +1,15 @@
 class QuestionNodesController < ApplicationController
-	def index
-		@question = Question_node.all
-	end
+
 
 	def new
 		
 	end
 
-	def create
-		@question = QuestionNode.new(
-																	@text = params[:text],
-																	@role = params[:role]
-																	)
-		@question.save
+
+	def show
+		question = QuestionNode.find(params[:id])
+
 	end
+	
 
 end

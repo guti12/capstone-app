@@ -1,5 +1,8 @@
 <h1>Rosie's Lemonade Stand</h1>
 
-<h2><%= #{QuestionNode.text} %></h2>
-<%= link_to "Yes", "/answer_nodes/#{AnswerNode.next_question_id}", method: :get %>
-<%= link_to "No", "/answer_nodes/#{AnswerNode.next_question_id}", method: :get %>
+<h2><%= @question.text %></h2>
+
+<% @answers.each do |answer| %>
+	<%= link_to answer.text, "/question_nodes/#{answer.next_question_id}" %>
+<% end %>
+

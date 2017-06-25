@@ -10,12 +10,16 @@ class QuestionNodesController < ApplicationController
 		@question = QuestionNode.find(params[:id])
 		@answers = @question.answer_nodes
 
-		@user_answer = UserAnswerId.new(answer_node_id: params[:id],
-																		user_id: current_user.id
-																		)
 
-		@user_answer.save
+	end
 
+	def answer
+		answer_node = AnswerNode.find(params[:id])
+		user_answer = UserAnswer.new(answer_node_id: answer_node.id,
+																	user_id: current_user.id
+																	)
+		user_answer.save
+		redirect_to "/question_nodes/#{answer_node.next_question_id}"
 	end
 	
 

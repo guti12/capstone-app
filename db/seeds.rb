@@ -32,3 +32,12 @@
 # 										{question_id: 11, text: "No", next_question_id: 12},
 										
 # 										])
+
+Product.create!([{name: "Small Lemonade", keywords: "sweet,small,cup,glass,lemonade,drink,lemons,thirsty", price: 1},
+								 {name: "Medium Lemonade", keywords: "sweet,medium,average,normal,cup,glass,lemonade,drink,lemons,thirsty", price: 2},
+								 {name: "Large Lemonade", keywords: "sweet,large,very,cup,glass,lemonade,drink,lemons,thirsty", price: 3},
+								 {name: "Cookies", keywords: "hungry,snack,cookie,cookies,munch,sweet,chocolate", price: 2},
+								 {name: "Water", keywords: "glass,water,cup,unsweetened,thirsty,quench,thirst", price: 1},
+	])
+
+

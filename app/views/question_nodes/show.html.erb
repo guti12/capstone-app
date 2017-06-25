@@ -3,6 +3,6 @@
 <h2><%= @question.text %></h2>
 
 <% @answers.each do |answer| %>
-	<%= link_to answer.text, "/question_nodes/#{answer.next_question_id}" %>
+	<%= link_to answer.text, "/answer/#{answer.id}", method: :post %>
 <% end %>
 

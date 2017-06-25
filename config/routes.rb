@@ -13,10 +13,12 @@ Rails.application.routes.draw do
 
 #questions page
 	get '/question_nodes/:id' => 'question_nodes#show'
+	post '/answer/:id' => 'question_nodes#answer'
 
 #answers page
 	get '/answer_nodes/:id' => 'answer_nodes#show'
 
-
+#create page for carted products
+	post '/cart' => 'carted_products#create'
 
 end

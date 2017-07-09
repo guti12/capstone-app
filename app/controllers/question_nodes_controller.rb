@@ -19,8 +19,15 @@ class QuestionNodesController < ApplicationController
 																	user_id: current_user.id
 																	)
 		user_answer.save
-		redirect_to "/question_nodes/#{answer_node.next_question_id}"
+
+		if answer_node.question_node.role == 3
+			redirect_to '/carted_products', method: :post
+		else
+			redirect_to "/question_nodes/#{answer_node.next_question_id}"
+		end
 	end
+
+
 	
 
 end

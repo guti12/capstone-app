@@ -16,12 +16,13 @@ class QuestionNodesController < ApplicationController
 	def answer
 		answer_node = AnswerNode.find(params[:id])
 		user_answer = UserAnswer.new(answer_node_id: answer_node.id,
-																	user_id: current_user.id
+																	user_id: current_user.id,
+																	status: "current"
 																	)
 		user_answer.save
 
-		if answer_node.question_node.role == 3
-			redirect_to '/carted_products', method: :post
+		if answer_node.next_question.role == 3
+			redirect_to '/compile_cart'
 		else
 			redirect_to "/question_nodes/#{answer_node.next_question_id}"
 		end

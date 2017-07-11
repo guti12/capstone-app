@@ -19,7 +19,7 @@ Rails.application.routes.draw do
 	get '/answer_nodes/:id' => 'answer_nodes#show'
 
 #create page for carted products
-	post '/carted_products' => 'carted_products#create'
+	get '/compile_cart' => 'carted_products#compile'
 	get '/carted_products' => 'carted_products#index'
 
 end

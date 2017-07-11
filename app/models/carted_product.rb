@@ -1,7 +1,7 @@
 class CartedProduct < ApplicationRecord
-	belongs_to :users
-	belongs_to :orders
-	has_many :products
+	belongs_to :user
+	belongs_to :order, optional: true
+	belongs_to :product
 
 	
 	

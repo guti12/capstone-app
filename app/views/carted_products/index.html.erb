@@ -1,7 +1,7 @@
 <h1>BASED ON WHAT YOU TOLD ME, IT SOUNDS LIKE THIS WOULD COMPLETE YOUR ORDER:</h1>
 
-<% @carted_products.each do |carted_product| %>
-    <tr>
-      <td><%= carted_product.product.name %></td>
-    </tr>
-  <% end %>
+<h1>Order</h1>
+<% @carted_products.each do | carted_product | %>
+	<%= carted_product.product.name %>
+	<%= carted_product.quantity %>
+<% end %>

@@ -1,9 +1,11 @@
 class CartedProductsController < ApplicationController
+	def index
+    @carted_products = current_user.carted_products.where(status: "carted")
+	end
 
-	def create
-	    current_user.compile_cart
-	    @carted_products = current_user.carted_products.where(status: "carted")
-	    redirect_to "/carted_products"
+	def compile
+    current_user.compile_cart
+    redirect_to "/carted_products"
 	end
 
 end

@@ -1,4 +1,4 @@
-[#<QuestionNode id: 1, text: "Do you like lemonade?", role: 1, 
+#<QuestionNode id: 1, text: "Do you like lemonade?", role: 1, 
 #<QuestionNode id: 2, text: "How many cups would you like? (3 cup limit)", role: 2,
 #<QuestionNode id: 3, text: "What size servings would you like?", role: 2,
 #<QuestionNode id: 4, text: "Would you like ice?", role: 2,
@@ -37,7 +37,7 @@ Product.create!([{name: "Small Lemonade", keywords: "sweet,small,cup,glass,lemon
 								 {name: "Medium Lemonade", keywords: "sweet,medium,average,normal,cup,glass,lemonade,drink,lemons,thirsty", price: 2},
 								 {name: "Large Lemonade", keywords: "sweet,large,very,cup,glass,lemonade,drink,lemons,thirsty", price: 3},
 								 {name: "Cookies", keywords: "hungry,snack,cookie,cookies,munch,sweet,chocolate", price: 2},
-								 {name: "Water", keywords: "glass,water,cup,unsweetened,thirsty,quench,thirst", price: 1},
-	])
+								 {name: "Water", keywords: "glass,water,cup,unsweetened,thirsty,quench,thirst", price: 1}
+									])
 
 

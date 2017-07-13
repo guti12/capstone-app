@@ -1,0 +1,12 @@
+<h1>Order Confirmation</h1>
+
+  <% @order.carted_products.each do |carted_product| %>
+    <%= carted_product.quantity %>
+    <%= carted_product.product.name %>
+    <%= number_to_currency(carted_product.product.price) %>
+    <p>
+    	
+    </p>
+  <% end %>
+    
+</div>

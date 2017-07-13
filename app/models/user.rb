@@ -7,26 +7,28 @@ class User < ApplicationRecord
 	has_many :feedbacks
 	
 	def	compile_cart
+		if current_user
+
 		current_user_answers = user_answers.where(status: "current")
 
 		# Lemonade
 		if current_user_answers.where(answer_node_id: 1).exists?
-			# # num of cups
-			# if current_user_answers.where(answer_node_id: 2).exists?
-			# 	# num_cups = 1
-			# elsif current_user_answers.where(answer_node_id: 3).exists?
-			# 	# num_cups = 2
-			# elsif current_user_answers.where(answer_node_id: 4).exists?
-			# 	# num_cups = 3
-			# end
+			# num of cups
+			if current_user_answers.where(answer_node_id: 2).exists?
+				num_cups = 1
+			elsif current_user_answers.where(answer_node_id: 3).exists?
+				num_cups = 2
+			elsif current_user_answers.where(answer_node_id: 4).exists?
+				num_cups = 3
+			end
 
 			# size
 			if current_user_answers.where(answer_node_id: 5).exists?
-				CartedProduct.create(user_id: id, product_id: 1, quantity: 1, status: "carted")
+				CartedProduct.create(user_id: id, product_id: 1, quantity: num_cups, status: "carted")
 			elsif current_user_answers.where(answer_node_id: 6).exists?
-				CartedProduct.create(user_id: id, product_id: 2, quantity: 2, status: "carted")
+				CartedProduct.create(user_id: id, product_id: 2, quantity: num_cups, status: "carted")
 			elsif current_user_answers.where(answer_node_id: 7).exists?
-				CartedProduct.create(user_id: id, product_id: 3, quantity: 3, status: "carted")
+				CartedProduct.create(user_id: id, product_id: 3, quantity: num_cups, status: "carted")
 			end
 		end
 		

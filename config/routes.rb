@@ -22,4 +22,8 @@ Rails.application.routes.draw do
 	get '/compile_cart' => 'carted_products#compile'
 	get '/carted_products' => 'carted_products#index'
 
+#create orders page 
+	post '/orders' => 'orders#create'
+	get '/orders/:id' => 'orders#show'
+
 end

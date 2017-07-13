@@ -1,6 +1,9 @@
 class SessionsController < ApplicationController
 	def new
-		
+		user = User.find_by(email: params[:email])
+			if user && user.authenticate(params[:password])	
+				@carted_products.status == "incomplete"
+			end
 	end
 
 	def create

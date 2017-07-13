@@ -4,5 +4,10 @@
 <% @carted_products.each do | carted_product | %>
  	<%= carted_product.quantity %>
 	<%= carted_product.product.name %>
-	$<%= carted_product.product.price %>
+	<%= number_to_currency(carted_product.product.price) %>
+	<p>
+
+	</p>
 <% end %>
+
+<%= link_to "Take to register", "/orders", method: :post, class: "btn btn-success" %>

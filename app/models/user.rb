@@ -7,7 +7,6 @@ class User < ApplicationRecord
 	has_many :feedbacks
 	
 	def	compile_cart
-		if current_user
 
 		current_user_answers = user_answers.where(status: "current")
 

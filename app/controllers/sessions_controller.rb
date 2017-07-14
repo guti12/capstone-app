@@ -1,9 +1,9 @@
 class SessionsController < ApplicationController
 	def new
-		user = User.find_by(email: params[:email])
-			if user && user.authenticate(params[:password])	
-				@carted_products.status == "incomplete"
-			end
+		# user = User.find_by(email: params[:email])
+		# 	if user && user.authenticate(params[:password])	
+		# 		@carted_products.status == "incomplete"
+		# 	end
 	end
 
 	def create
@@ -16,9 +16,16 @@ class SessionsController < ApplicationController
 		end
 	end	
 
-	 def destroy
-    session[:user_id] = nil
-    redirect_to "/"
-  end
+	# def destroy
+	# 	carted_product = CartedProduct.find(params[:id])
+	# 	carted_product.update(status: "incomplete")
+ #    session[:user_id] = nil
+ #    redirect_to "/"
+ #  end
+
+	def destroy
+		session[:user_id] = nil
+		redirect_to "/"
+	end
 
 end

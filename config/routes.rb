@@ -21,6 +21,7 @@ Rails.application.routes.draw do
 #create page for carted products
 	get '/compile_cart' => 'carted_products#compile'
 	get '/carted_products' => 'carted_products#index'
+	delete '/carted_products' => 'carted_products#destroy'
 
 #create orders page 
 	post '/orders' => 'orders#create'

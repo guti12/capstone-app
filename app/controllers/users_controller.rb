@@ -16,8 +16,12 @@ class UsersController < ApplicationController
 									password_confirmation: params[:password_confirmation]
 									)
 		if @user.save
-			redirect_to '/question_nodes/1'
+			session[:user_id] = @user.id
+			redirect_to "/question_nodes/1"
+		else
+			redirect_to '/signup'
 		end
+
 	end
 
 end

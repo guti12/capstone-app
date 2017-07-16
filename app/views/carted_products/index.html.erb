@@ -1,6 +1,7 @@
-<h1>BASED ON WHAT YOU TOLD ME, IT SOUNDS LIKE THIS WOULD COMPLETE YOUR ORDER:</h1>
-
-<h1>Order</h1>
+<div class="col-lg-12 text-center">
+<h1>Here's what we have for you</h1>
+<hr class="star-primary">
+</div>
 <% @carted_products.each do | carted_product | %>
  	<%= carted_product.quantity %>
 	<%= carted_product.product.name %>

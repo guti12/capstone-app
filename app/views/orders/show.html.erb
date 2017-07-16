@@ -1,12 +1,15 @@
-<h1>Order Confirmation</h1>
+<div class="col-lg-12 text-center">
+	<h1>Just to confirm, here you go:</h1>
+	<hr class="star-primary">
 
-  <% @order.carted_products.each do |carted_product| %>
-    <%= carted_product.quantity %>
-    <%= carted_product.product.name %>
-    <%= number_to_currency(carted_product.product.price) %>
-    <p>
-    	
-    </p>
-  <% end %>
-    
+	<div class="well">
+	  <% @order.carted_products.each do |carted_product| %>
+
+	    <h4><%= carted_product.quantity %>
+	    		<%= carted_product.product.name %>
+	    		<%= number_to_currency(carted_product.product.price) %></h4>
+
+	  <% end %>
+
+	</div>
 </div>

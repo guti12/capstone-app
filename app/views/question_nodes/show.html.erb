@@ -1,8 +1,15 @@
-<h1>Rosie's Lemonade Stand</h1>
-
-<h2><%= @question.text %></h2>
-
+<div class="col-lg-12 text-center">
+<h1><%= @question.text %></h1>
+<hr class="star-primary">
+</div>
+<div class="col-lg-12 text-center">
 <% @answers.each do |answer| %>
-	<%= link_to answer.text, "/answer/#{answer.id}", method: :post %>
+	<%= link_to answer.text, "/answer/#{answer.id}", method: :post, class: "btn btn-primary" %>
 <% end %>
+</div>
+
+
+
+
+
 

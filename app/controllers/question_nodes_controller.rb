@@ -15,6 +15,7 @@ class QuestionNodesController < ApplicationController
 
 	def answer
 		answer_node = AnswerNode.find(params[:id])
+		p current_user
 		user_answer = UserAnswer.new(answer_node_id: answer_node.id,
 																	user_id: current_user.id,
 																	status: "current"

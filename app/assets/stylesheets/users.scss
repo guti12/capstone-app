@@ -2,7 +2,23 @@
 	min-height: 550px;
 }
 
-#background-image {
-	background: url("/public/img/lemonade_background.png");
-	z-index: 2;
+#signup {
+	background-image: url("/img/lemonade_background.jpg");
+	z-index: 1;
+}
+
+#top-margin {
+	margin-top: 15%;
+}
+
+#top-margin-signup {
+	margin-top: 3%;
+}
+
+#top-margin-login {
+	margin-top: 10%;
+}
+
+#top-margin-cart {
+	margin-top: 10%;
 }

@@ -1,14 +1,15 @@
-<div class="col-lg-12 text-center">
-<h1>Here's what we have for you</h1>
-<hr class="star-primary">
+<div id="top-margin-cart">
+	<div class="well">
+		<div class="col-lg-12 text-center">
+		<h1>Here's what we have for you</h1>
+		<hr class="star-primary">
+		</div>
+			<% @carted_products.each do | carted_product | %>
+			 	<h4><%= carted_product.quantity %>
+					<%= carted_product.product.name %>
+					<%= number_to_currency(carted_product.product.price) %></h4>
+			<% end %>
+
+		<%= link_to "Take to register", "/orders", method: :post, class: "btn btn-success" %>
+	</div>
 </div>
-<% @carted_products.each do | carted_product | %>
- 	<%= carted_product.quantity %>
-	<%= carted_product.product.name %>
-	<%= number_to_currency(carted_product.product.price) %>
-	<p>
-
-	</p>
-<% end %>
-
-<%= link_to "Take to register", "/orders", method: :post, class: "btn btn-success" %>

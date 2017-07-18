@@ -11,7 +11,7 @@ class User < ApplicationRecord
 		current_user_answers = user_answers.where(status: "current")
 
 		# Lemonade
-		if current_user_answers.where(answer_node_id: 1).exists?
+		if current_user_answers.where(answer_node_id: 1).exists? || current_user_answers.where(answer_node_id: 17).exists? || current_user_answers.where(answer_node_id: 15).exists?
 			# num of cups
 			if current_user_answers.where(answer_node_id: 2).exists?
 				num_cups = 1
@@ -44,5 +44,5 @@ class User < ApplicationRecord
 		current_user_answers.update_all(status: "old")
 	end
 	
-end	
+end 
 

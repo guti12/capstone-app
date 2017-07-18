@@ -1,33 +1,37 @@
-<div id="background-image">
-	<div class="col-lg-12 text-center">
-	<h1>Sign Up</h1>
-	<hr class="star-primary">
+<div id="top-margin-signup">
+	<div class="well">
+		<div id="background-image">
+			<div class="col-lg-12 text-center">
+			<h1>Sign Up</h1>
+			<hr class="star-primary">
+			</div>
+			<br>
+			<%= form_tag '/users', method: :post do %>
+				
+			 	<div class="form-group">
+			    <label for="userfirstname">First Name</label>
+			    <input type="string" class="form-control" name="first_name" placeholder="First Name">
+			  </div>
+			  <div class="form-group">
+			    <label for="userlastname">Last Name</label>
+			    <input type="string" class="form-control" name="last_name" placeholder="Last Name">
+			  </div>
+			  <div class="form-group">
+			    <label for="useremail">Email</label>
+			    <input type="email" class="form-control" name="email" placeholder="Email">
+			  </div>
+			  <div class="form-group">
+			    <label for="userpassword">Password</label>
+			    <input type="password" class="form-control" name="password" placeholder="Password">
+			  </div>
+			  <div class="form-group">
+			    <label for="userpasswordconfifirmation">Confirm Password</label>
+			    <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
+			  </div>
+
+			  <button type="submit" class="btn btn-default">Submit</button>
+
+			<% end %>
+		</div>
 	</div>
-	<br>
-	<%= form_tag '/users', method: :post do %>
-		
-	 	<div class="form-group">
-	    <label for="userfirstname">First Name</label>
-	    <input type="string" class="form-control" name="first_name" placeholder="First Name">
-	  </div>
-	  <div class="form-group">
-	    <label for="userlastname">Last Name</label>
-	    <input type="string" class="form-control" name="last_name" placeholder="Last Name">
-	  </div>
-	  <div class="form-group">
-	    <label for="useremail">Email</label>
-	    <input type="email" class="form-control" name="email" placeholder="Email">
-	  </div>
-	  <div class="form-group">
-	    <label for="userpassword">Password</label>
-	    <input type="password" class="form-control" name="password" placeholder="Password">
-	  </div>
-	  <div class="form-group">
-	    <label for="userpasswordconfifirmation">Confirm Password</label>
-	    <input type="password" class="form-control" name="password_confirmation" placeholder="Confirm Password">
-	  </div>
-
-	  <button type="submit" class="btn btn-default">Submit</button>
-
-	<% end %>
 </div>
